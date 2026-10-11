@@ -53,7 +53,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --filter-tcp=443 ^
 --hostlist="%LISTS%list-google.txt" ^
 --payload=tls_client_hello ^
---lua-desync=multisplit:pos=2:ip_id=zero ^
+--lua-desync=multidisorder:pos=2,midsld:ip_id=zero ^
 --new ^
 
 --name="domain tls" ^
@@ -65,6 +65,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
+--lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2 ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
@@ -90,6 +91,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
+--lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2 ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^

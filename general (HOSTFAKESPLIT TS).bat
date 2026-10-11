@@ -65,10 +65,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=hostfakesplit:host=www.google.com:disorder_after=:repeats=8:tcp_ts=-600000 ^
+--lua-desync=hostfakesplit:host=max.ru:disorder_after=:repeats=8:tcp_ts=-600000 ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
---lua-desync=hostfakesplit:host=www.google.com:disorder_after=:repeats=8:tcp_ts=-600000 ^
+--lua-desync=hostfakesplit:host=max.ru:disorder_after=:repeats=8:tcp_ts=-600000 ^
 --new ^
 
 --name="ip quic" ^
@@ -90,10 +90,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=hostfakesplit:host=www.google.com:disorder_after=:repeats=8:tcp_ts=-600000 ^
+--lua-desync=hostfakesplit:host=max.ru:disorder_after=:repeats=8:tcp_ts=-600000 ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
---lua-desync=hostfakesplit:host=www.google.com:disorder_after=:repeats=8:tcp_ts=-600000 ^
+--lua-desync=hostfakesplit:host=max.ru:disorder_after=:repeats=8:tcp_ts=-600000 ^
 --new ^
 
 --name="gamefiltertcp" ^
