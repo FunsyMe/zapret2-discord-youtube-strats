@@ -20,7 +20,7 @@
 1. заходим на [dash.cloudflare.com](https://dash.cloudflare.com/) - ищем слева `Compute`, тыкаем, находим `Workers & Pages`
     * аккаунта нет? регистрируемся, без этого Worker не создать
 2. сверху справа `Create application` -> `Start with Hello World!` -> `Deploy`
-3. сверху справа `Edit code`, удаляем весь код и вставляем код [снизу](#worker) -> `Deploy` -> тыкаем стрелку слева сверху (для того чтобы на страницу воркера)
+3. сверху справа `Edit code`, удаляем весь код и вставляем код [снизу](#worker) -> `Deploy` -> тыкаем стрелку слева сверху (для того чтобы вернуться на страницу воркера)
 4. на странице вашего Worker'а открываем `Settings` (сверху) -> находим `Runtime variables and secrets` -> `+ Add variable` (чуть правее названия)
     1. Environment оставляем на `Production`
     2. в `Key` пишем что хотим, но можно и `KEY` (капсом)
