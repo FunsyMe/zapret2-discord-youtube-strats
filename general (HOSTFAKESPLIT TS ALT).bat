@@ -69,6 +69,8 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_onetrust ^
 --payload=http_req ^
+--lua-desync=fake:blob=stun:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_onetrust ^
 --new ^
 
@@ -94,7 +96,9 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_onetrust ^
 --payload=http_req ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_onetrust ^
+--lua-desync=fake:blob=stun:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=multisplit:pos=2:seqovl=1892:seqovl_pattern=tls_teamspeak ^
 --new ^
 
 --name="gamefiltertcp" ^

@@ -54,7 +54,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --filter-tcp=443 ^
 --hostlist="%LISTS%list-google.txt" ^
 --payload=tls_client_hello ^
---lua-desync=fake:blob=tls_google:tls_mod=rnd,dupsid,sni=www.google.com:repeats=11:tcp_seq=-10000:ip_id=zero ^
+--lua-desync=fake:blob=tls_google:tls_mod=rnd,dupsid,sni=www.google.com:repeats=11:tcp_ts=-600000:ip_id=zero ^
 --lua-desync=multidisorder:pos=2,midsld:ip_id=zero ^
 --new ^
 
@@ -67,10 +67,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=fake:blob=tls_google:tls_mod=rnd,dupsid,sni=www.google.com:repeats=11:tcp_seq=-10000 ^
+--lua-desync=fake:blob=tls_5ka:tls_mod=rnd,dupsid,sni=5ka.ru:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=11:tcp_seq=-10000 ^
+--lua-desync=fake:blob=tls_onetrust:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --new ^
 
@@ -93,10 +93,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=fake:blob=tls_google:tls_mod=rnd,dupsid,sni=www.google.com:repeats=11:tcp_seq=-10000 ^
+--lua-desync=fake:blob=tls_5ka:tls_mod=rnd,dupsid,sni=5ka.ru:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=11:tcp_seq=-10000 ^
+--lua-desync=fake:blob=tls_onetrust:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --new ^
 

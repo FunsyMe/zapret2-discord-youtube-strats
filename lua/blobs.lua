@@ -16,7 +16,7 @@ local function load(file)
 	return data, path
 end
 
--- шаблон
+-- это шаблон, обязательно ставьте запятые
 for name, file in pairs{
 	tls_google      = "tls_clienthello_www_google_com.bin",
 	tls_onetrust    = "tls_clienthello_max_ru.bin",
