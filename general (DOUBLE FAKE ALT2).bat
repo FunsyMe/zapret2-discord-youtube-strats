@@ -67,10 +67,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=stun:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
 --lua-desync=multisplit:pos=2 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
 --lua-desync=multisplit:pos=2 ^
 --new ^
 
@@ -94,10 +94,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=stun:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
 --lua-desync=multisplit:pos=2 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
 --lua-desync=multisplit:pos=2 ^
 --new ^
 
@@ -109,9 +109,9 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --out-range=-n5 ^
 --payload=tls_client_hello,unknown ^
 --lua-desync=fake:blob=stun:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up:payload=tls_client_hello,unknown ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up:payload=tls_client_hello,unknown ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up:payload=tls_client_hello,unknown ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_seq=2:tcp_ack=-66000:tcp_ts_up ^
 --new ^
 
 --name="gamefilterudp" ^

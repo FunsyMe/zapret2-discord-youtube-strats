@@ -66,10 +66,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2 ^
 --new ^
 
@@ -92,10 +92,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2 ^
 --new ^
 
@@ -106,9 +106,9 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --out-range=-n5 ^
 --payload=tls_client_hello,unknown ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000:payload=tls_client_hello,unknown ^
+--lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000:payload=tls_client_hello,unknown ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
 --new ^
 
 --name="gamefilterudp" ^

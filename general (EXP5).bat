@@ -70,12 +70,12 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=tls_client_hello_clone:blob=ch_clone:fallback=tls_retext:sni_del:sni_first=retext.ai:sni_snt_new=0 ^
+--lua-desync=tls_client_hello_clone:blob=ch_clone:fallback=tls_steamchat:sni_del:sni_first=winelab.ru:sni_snt_new=0 ^
 --lua-desync=fake:blob=ch_clone:repeats=6:tcp_ts=-600000 ^
---lua-desync=fake:blob=tls_retext:tls_mod=rnd,padencap:repeats=4:badsum ^
+--lua-desync=fake:blob=tls_steamchat:tls_mod=rnd,padencap:repeats=4:badsum ^
 --lua-desync=multisplit:pos=sniext+1,midsld:seqovl=1 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=host+1,endhost-1:seqovl=1 ^
 --new ^
 
@@ -98,11 +98,11 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=tls_client_hello_clone:blob=ch_clone:fallback=tls_retext:sni_del:sni_first=retext.ai:sni_snt_new=0 ^
+--lua-desync=tls_client_hello_clone:blob=ch_clone:fallback=tls_steamchat:sni_del:sni_first=winelab.ru:sni_snt_new=0 ^
 --lua-desync=fake:blob=ch_clone:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=sniext+1,midsld:seqovl=1 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=host+1,endhost-1:seqovl=1 ^
 --new ^
 
@@ -113,7 +113,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --out-range=-n5 ^
 --payload=tls_client_hello ^
---lua-desync=tls_client_hello_clone:blob=ch_clone:fallback=tls_onetrust:sni_del:sni_first=4pda.to:sni_snt_new=0 ^
+--lua-desync=tls_client_hello_clone:blob=ch_clone:fallback=tls_sferum:sni_del:sni_first=4pda.to:sni_snt_new=0 ^
 --lua-desync=fake:blob=ch_clone:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=sniext+1,midsld:seqovl=1 ^
 --payload=http_req,unknown ^

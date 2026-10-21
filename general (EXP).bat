@@ -68,10 +68,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=fake:blob=tls_onetrust:repeats=4:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=4:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2:seqovl=480:seqovl_pattern=stun2 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=4:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=4:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2:seqovl=480:seqovl_pattern=stun2 ^
 --new ^
 
@@ -95,10 +95,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=fake:blob=tls_onetrust:repeats=4:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=4:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2:seqovl=480:seqovl_pattern=stun2 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=4:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_sferum:repeats=4:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=2:seqovl=480:seqovl_pattern=stun2 ^
 --new ^
 
@@ -110,11 +110,11 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --out-range=-n4 ^
 --payload=tls_client_hello,unknown ^
 --lua-desync=fake:blob=stun2:repeats=8:tcp_ts=-600000:payload=tls_client_hello,unknown ^
---lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000:payload=tls_client_hello,unknown ^
---lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_onetrust:payload=tls_client_hello,unknown ^
+--lua-desync=fake:blob=tls_sferum:repeats=8:tcp_ts=-600000:payload=tls_client_hello,unknown ^
+--lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_sferum:payload=tls_client_hello,unknown ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_onetrust ^
+--lua-desync=fake:blob=tls_sferum:repeats=8:tcp_ts=-600000 ^
+--lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_sferum ^
 --new ^
 
 --name="gamefilterudp" ^
@@ -124,5 +124,5 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --out-range=-n4 ^
 --payload=all ^
---lua-desync=fake:blob=quic_4pda:repeats=5:payload=all ^
+--lua-desync=fake:blob=tls_sferum:repeats=5:payload=all ^
 --lua-desync=fake:blob=active_game:repeats=5:payload=all
