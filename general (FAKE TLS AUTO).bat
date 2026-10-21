@@ -70,7 +70,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_5ka:tls_mod=rnd,dupsid,sni=5ka.ru:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=11:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --new ^
 
@@ -96,7 +96,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_5ka:tls_mod=rnd,dupsid,sni=5ka.ru:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=11:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=11:tcp_ts=-600000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --new ^
 
@@ -110,7 +110,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_google:tls_mod=rnd,dupsid,sni=www.google.com:repeats=11:tcp_seq=-10000:payload=tls_client_hello,unknown ^
 --lua-desync=multidisorder:pos=2,midsld:payload=tls_client_hello,unknown ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=11:tcp_seq=-10000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=11:tcp_seq=-10000 ^
 --lua-desync=multidisorder:pos=2,midsld ^
 --new ^
 

@@ -70,7 +70,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fakedsplit:pattern=0x00:repeats=6:tcp_ts=-600000 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fakedsplit:pattern=0x00:repeats=6:tcp_ts=-600000 ^
 --new ^
 
@@ -96,7 +96,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fakedsplit:pattern=0x00:repeats=6:tcp_ts=-600000 ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fakedsplit:pattern=0x00:repeats=6:tcp_ts=-600000 ^
 --new ^
 
@@ -110,7 +110,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_google:repeats=6:tcp_ts=-600000:payload=tls_client_hello,unknown ^
 --lua-desync=fakedsplit:pattern=0x00:repeats=6:tcp_ts=-600000:payload=tls_client_hello,unknown ^
 --payload=http_req ^
---lua-desync=fake:blob=tls_onetrust:repeats=6:tcp_ts=-600000 ^
+--lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fakedsplit:pattern=0x00:repeats=6:tcp_ts=-600000 ^
 --new ^
 
