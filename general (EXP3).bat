@@ -69,7 +69,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --lua-desync=fake:blob=tls_retext:tls_mod=rnd,padencap:repeats=4:badsum ^
 --lua-desync=fake:blob=tls_sferum:tls_mod=rnd,dupsid,sni=www.sferum.ru:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fake:blob=tls_5ka:tls_mod=rnd,dupsid,sni=5ka.ru:repeats=6:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_sferum ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=midsld:seqovl=1 ^

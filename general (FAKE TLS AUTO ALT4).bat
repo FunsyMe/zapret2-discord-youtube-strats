@@ -46,14 +46,14 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --filter-tcp=2053,2083,2087,2096,8443 ^
 --hostlist-domains=discord.media ^
 --payload=tls_client_hello ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google ^
 --new ^
 
 --name="youtube" ^
 --filter-tcp=443 ^
 --hostlist="%LISTS%list-google.txt" ^
 --payload=tls_client_hello ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google:ip_id=zero ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google:ip_id=zero ^
 --new ^
 
 --name="domain tls" ^
@@ -65,10 +65,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_steamchat:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google ^
 --new ^
 
 --name="ip quic" ^
@@ -90,10 +90,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude.txt" ^
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_steamchat:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google ^
 --new ^
 
 --name="gamefiltertcp" ^
@@ -104,10 +104,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --out-range=-n4 ^
 --payload=tls_client_hello,unknown ^
 --lua-desync=fake:blob=tls_steamchat:repeats=8:tcp_ts=-600000:payload=tls_client_hello,unknown ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google:payload=tls_client_hello,unknown ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google:payload=tls_client_hello,unknown ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_steamchat:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=3,sniext+1:seqovl=679:seqovl_pattern=tls_google ^
+--lua-desync=multisplit:pos=3,sniext+1:seqovl=681:seqovl_pattern=tls_google ^
 --new ^
 
 --name="gamefilterudp" ^

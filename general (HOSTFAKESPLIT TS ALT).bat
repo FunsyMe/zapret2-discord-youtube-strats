@@ -67,11 +67,11 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=tls_teamspeak:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_teamspeak ^
+--lua-desync=multisplit:pos=2:seqovl=1892:seqovl_pattern=tls_teamspeak ^
 --payload=http_req ^
 --lua-desync=fake:blob=stun:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fake:blob=tls_teamspeak:repeats=6:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_teamspeak ^
+--lua-desync=multisplit:pos=2:seqovl=1892:seqovl_pattern=tls_teamspeak ^
 --new ^
 
 --name="ip quic" ^
@@ -94,7 +94,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=tls_teamspeak:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_teamspeak ^
+--lua-desync=multisplit:pos=2:seqovl=1892:seqovl_pattern=tls_teamspeak ^
 --payload=http_req ^
 --lua-desync=fake:blob=stun:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fake:blob=tls_teamspeak:repeats=6:tcp_ts=-600000 ^
@@ -109,7 +109,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --out-range=-n4 ^
 --payload=all ^
 --lua-desync=fake:blob=tls_teamspeak:tls_mod=rnd,dupsid,sni=www.google.com:repeats=8:tcp_ts=-600000:payload=all ^
---lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_teamspeak ^
+--lua-desync=multisplit:pos=2:seqovl=1892:seqovl_pattern=tls_teamspeak ^
 --new ^
 
 --name="gamefilterudp" ^

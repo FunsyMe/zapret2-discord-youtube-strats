@@ -47,7 +47,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --hostlist-domains=discord.media ^
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=tls_sferum:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_sferum ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum ^
 --new ^
 
 --name="youtube" ^
@@ -68,11 +68,11 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=tls_sferum:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_sferum ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum ^
 --payload=http_req ^
 --lua-desync=fake:blob=stun:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_sferum ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum ^
 --new ^
 
 --name="ip quic" ^
@@ -95,11 +95,11 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --ipset-exclude="%LISTS%ipset-exclude-user.txt" ^
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=tls_sferum:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_sferum ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum ^
 --payload=http_req ^
 --lua-desync=fake:blob=stun:repeats=6:tcp_ts=-600000 ^
 --lua-desync=fake:blob=tls_sferum:repeats=6:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_sferum ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum ^
 --new ^
 
 --name="gamefiltertcp" ^
@@ -111,10 +111,10 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --payload=tls_client_hello,unknown ^
 --lua-desync=fake:blob=stun:repeats=8:tcp_ts=-600000:payload=tls_client_hello,unknown ^
 --lua-desync=fake:blob=tls_sferum:repeats=8:tcp_ts=-600000:payload=tls_client_hello,unknown ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_sferum:payload=tls_client_hello,unknown ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum:payload=tls_client_hello,unknown ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_sferum:repeats=8:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=654:seqovl_pattern=tls_sferum ^
+--lua-desync=multisplit:pos=2:seqovl=661:seqovl_pattern=tls_sferum ^
 --new ^
 
 --name="gamefilterudp" ^

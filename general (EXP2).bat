@@ -69,7 +69,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=tls_retext:tls_mod=rnd,padencap:repeats=4:badsum ^
 --lua-desync=fake:blob=tls_5ka:tls_mod=rnd,dupsid,sni=5ka.ru:repeats=6:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_teamspeak ^
+--lua-desync=multisplit:pos=2:seqovl=1892:seqovl_pattern=tls_teamspeak ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_teamspeak:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=midsld:seqovl=1 ^

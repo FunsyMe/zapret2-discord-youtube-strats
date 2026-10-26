@@ -68,7 +68,7 @@ start "zapret: %~n0" /min "%BIN%winws2.exe" --wf-tcp-empty=0 --ctrack-disable=0 
 --payload=tls_client_hello ^
 --lua-desync=fake:blob=tls_retext:tls_mod=rnd,padencap:repeats=4:badsum ^
 --lua-desync=fake:blob=tls_steamchat:tls_mod=rnd,dupsid,sni=steam-chat.com:repeats=6:tcp_ts=-600000 ^
---lua-desync=multisplit:pos=2:seqovl=664:seqovl_pattern=tls_steamchat ^
+--lua-desync=multisplit:pos=2:seqovl=1889:seqovl_pattern=tls_steamchat ^
 --payload=http_req ^
 --lua-desync=fake:blob=tls_steamchat:repeats=6:tcp_ts=-600000 ^
 --lua-desync=multisplit:pos=midsld:seqovl=1 ^
